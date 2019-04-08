@@ -18,4 +18,6 @@ notifications:
     on_failure: always
 before_install:
 - openssl aes-256-cbc -K $encrypted_f467322827f3_key -iv $encrypted_f467322827f3_iv
+  -in mykey.enc -out keys/mykey -d
+- openssl aes-256-cbc -K $encrypted_f467322827f3_key -iv $encrypted_f467322827f3_iv
   -in keys/mykey.enc -out keys/mykey -d
