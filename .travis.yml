@@ -8,8 +8,7 @@ deploy:
   provider: script
   script: bash scripts/deploy.sh
   on:
-    tags: true
-    all_branches: true
+    branch: master
 notifications:
   slack:
     rooms:
